@@ -1,10 +1,24 @@
 import './App.css';
-import CatigoresContainer from './components/catgories-container/catgories.component';
+import React from 'react';
+import HomePage from './routes/home/home.component';
+import { Route, Routes } from 'react-router-dom';
+import Navgation from './routes/navgation/navgation.component';
+import Authentication from './routes/auth/authentcation.component';
+const Shop = () => {
+  return (<div>shop</div>)
+}
 
 const App = () => {
+
   return (
     <div className="App">
-      <CatigoresContainer />
+      <Routes>
+        <Route path='/' element={<Navgation />}>
+          <Route index element={<HomePage />} />
+          <Route path='/shop' element={<Shop />} />
+          <Route path='/auth' element={<Authentication />} />
+        </Route>
+      </Routes>
     </div>
   );
 }

@@ -4,7 +4,6 @@ import "./catgorie.styles.scss"
 
 const CatigoreItem = ({ catigore }) => {
     const { title, imageUrl } = catigore;
-    console.log(catigore);
     return (
         <div className="category-container">
             <div className="background-image" style={{ backgroundImage: `url(${imageUrl})` }} />
