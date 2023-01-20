@@ -14,8 +14,8 @@ import CartDropdown from '../../components/cart-drop-down/cart-drop-down.compone
 import './navgation.styles.scss';
 const Navigation = () => {
     const { currentUser } = useContext(UserContext);
-    const { cart } = useContext(CartContext);
-    const { toggleCart } = cart;
+    const { isCartOpen } = useContext(CartContext);
+
 
 
     return (
@@ -39,7 +39,7 @@ const Navigation = () => {
                     }
                     <CartIcon />
                 </div>
-                {toggleCart ? <CartDropdown /> : null}
+                {isCartOpen && <CartDropdown />}
             </div>
             <Outlet />
         </Fragment>

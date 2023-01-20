@@ -7,6 +7,7 @@ import Navgation from './routes/navgation/navgation.component';
 import Shop from './routes/shop/shop.component';
 
 import './App.css';
+import CheckOut from './routes/check-out/check-out.component';
 
 const App = () => {
 
@@ -17,6 +18,7 @@ const App = () => {
           <Route index element={<HomePage />} />
           <Route path='/shop' element={<Shop />} />
           <Route path='/auth' element={<Authentication />} />
+          <Route path='/checkout' element={<CheckOut />} />
         </Route>
       </Routes>
     </div>
