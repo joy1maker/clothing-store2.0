@@ -27,6 +27,7 @@
   
       .arrow {
         cursor: pointer;
+        user-select: none;
       }
   
       .value {
@@ -37,6 +38,7 @@
     .remove-button {
       padding-left: 12px;
       cursor: pointer;
+      user-select: none;
     }
   }
   
