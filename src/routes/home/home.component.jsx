@@ -1,11 +1,11 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import CatigoresContainer from "../../components/catgories-container/catgories.component"
+import Directory from "../../components/directory/directory.component"
 
 const HomePage = () => {
     return (
         <React.Fragment>
-            <CatigoresContainer />
+            <Directory />
             <Outlet />
         </React.Fragment>
     )
