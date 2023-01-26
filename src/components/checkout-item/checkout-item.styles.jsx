@@ -29,6 +29,7 @@ export const Quantity = styled(BaseSpan)`
 
 export const Arrow = styled.div`
   cursor: pointer;
+  user-select: none;
 `;
 
 export const Value = styled.span`
