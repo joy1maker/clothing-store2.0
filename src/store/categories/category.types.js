@@ -1,0 +1,4 @@
+
+export const CATIGORIES_ACTION_TYPES = {
+    'SET_CATIGORIES': 'SET_CATIGORIES'
+}
