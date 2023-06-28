@@ -34,8 +34,6 @@ export const setIsCartOpen = (bool) => {
 }
 
 export const addItemToCart = (cartItems, product) => {
-    console.log("cart items in add to cart", cartItems);
-    console.log("product in add to cart", product);
     const newCartItems = addCartItem(cartItems, product);
     return { payload: newCartItems, type: CART_ACTION_TYPES.SET_CART_ITEMS }
 }
