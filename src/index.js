@@ -4,22 +4,20 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
-import { UserProvider } from './contexts/user.context';
-import { CartProvider } from './contexts/cart.context';
-import { CatigoresProvider } from './contexts/catigores.context';
-
+import { Provider } from 'react-redux';
+import { presistor, store } from './store/store';
+import { PersistGate } from 'redux-persist/integration/react';
+import Spinner from './components/spinner/spinner.component';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <UserProvider>
-        <CatigoresProvider>
-          <CartProvider>
-            <App />
-          </CartProvider>
-        </CatigoresProvider>
-      </UserProvider>
-    </BrowserRouter>
+    <Provider store={store}>
+      <PersistGate persistor={presistor} loading={<Spinner />}>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </PersistGate>
+    </Provider>
   </React.StrictMode>
 );
 
